@@ -1,4 +1,4 @@
-"""API de questions/réponses sur l'histoire (RAG + Ollama).
+"""API RAG + Ollama : questions/réponses sur l'histoire, et 3 questions de préparation pour un client.
 
 Lancement :
     uvicorn api:app --reload
@@ -6,8 +6,10 @@ Swagger : http://localhost:8000/docs
 """
 
 from fastapi import FastAPI, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
 
+import clients
 import config
 import rag
 
@@ -19,11 +21,15 @@ Règles :
 - Réponds en français, en quelques phrases maximum."""
 
 app = FastAPI(
-    title="Story RAG API",
-    description="Pose des questions sur l'histoire chargée dans la base vectorielle. "
-                "Les réponses sont générées par un LLM Ollama à partir des passages retrouvés.",
-    version="1.0.0",
+    title="RAG API – Givaudan Opportunity Radar (équipe G03)",
+    description="`POST /questions-client` : nom d'un client → 3 questions à poser avant le premier appel, "
+                "générées par un LLM Ollama à partir de la fiche client retrouvée dans la base vectorielle. "
+                "Données fictives. Les routes `/ask` et `/search` (histoire) sont conservées.",
+    version="2.0.0",
 )
+# Autorise l'écran de Tech (autre domaine) à appeler l'API depuis le navigateur
+app.add_middleware(CORSMiddleware, allow_origins=["*"], allow_methods=["*"], allow_headers=["*"])
+app.include_router(clients.router)
 
 
 class AskRequest(BaseModel):
@@ -63,6 +69,7 @@ def health():
     """Vérifie que la base est chargée et indique les modèles utilisés."""
     return {
         "chunks": rag.get_collection().count(),
+        "client_chunks": rag.get_collection(name=config.CLIENTS_COLLECTION).count(),
         "llm_model": config.LLM_MODEL,
         "embed_model": config.EMBED_MODEL,
     }

@@ -1,0 +1,85 @@
+{
+  "identite": {
+    "id": "string",
+    "name": "string (nom fictif)",
+    "sector": "string",
+    "country": "string",
+    "account_manager": "string (nom fictif)",
+    "relationship_status": "string",
+    "last_updated": "JJ/MM/AAAA"
+  },
+  "indicateurs": {
+    "projets_actifs": "int",
+    "opportunites_detectees": "int",
+    "opportunites_a_qualifier": "int"
+  },
+  "synthese": {
+    "situation": "string",
+    "important_projects": [
+      "string"
+    ],
+    "expressed_needs": [
+      "string"
+    ],
+    "recent_signals": [
+      "string"
+    ],
+    "attention_points": [
+      "string"
+    ]
+  },
+  "historique": [
+    {
+      "date": "AAAA-MM-JJ",
+      "event": "string"
+    }
+  ],
+  "projets": [
+    {
+      "id": "string",
+      "client_id": "string",
+      "name": "string",
+      "description": "string",
+      "status": "actif | termine",
+      "start_date": "AAAA-MM-JJ"
+    }
+  ],
+  "opportunites": [
+    {
+      "id": "string",
+      "title": "string",
+      "category": "string",
+      "status": "detectee | a_qualifier | confirmee",
+      "priority": "haute | moyenne | basse",
+      "estimated_potential": "elevee | moyenne | faible | null (non renseigné)",
+      "feasibility": "a_confirmer | moyenne | elevee",
+      "complexity": "faible | moyenne | elevee",
+      "next_action": "string",
+      "signaux": [
+        {
+          "description": "string",
+          "source_type": "compte_rendu | demande_client | historique | projet | veille_marche",
+          "source_date": "AAAA-MM-JJ",
+          "confidence": "faible | moyenne | haute",
+          "evidence_type": "fait | hypothese"
+        }
+      ]
+    }
+  ],
+  "questions_preparatoires": [
+    {
+      "question": "string",
+      "pourquoi": "string",
+      "information_recherchee": "Objectifs du client | Besoin réel | Contraintes techniques | Contraintes budgétaires | Calendrier | Critères de décision",
+      "lien": "id d'une opportunité ou d'un projet"
+    }
+  ],
+  "a_confirmer": [
+    "string"
+  ],
+  "meta": {
+    "donnees": "fictives",
+    "questions": "string",
+    "source": "string"
+  }
+}

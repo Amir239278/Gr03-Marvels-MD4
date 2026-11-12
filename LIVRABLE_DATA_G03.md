@@ -5,7 +5,7 @@ Rédigé par Amir Meraka (équipe Data). **Toutes les données du prototype sont
 
 | Dépôt | Contenu |
 |---|---|
-| [Gr03-Marvels-MD4](https://github.com/Amir239278/Gr03-Marvels-MD4) | API RAG (fork de `hmicn/example-rag`) : nom d'un client → 3 questions |
+| [Gr03-Marvels-MD4, branche `Amir`](https://github.com/Amir239278/Gr03-Marvels-MD4/tree/Amir) | API RAG (fork de `hmicn/example-rag`) : nom d'un client → 3 questions |
 | [Data_intelligence, branche `amir`](https://github.com/Hetic-Hackathon-Givaudan-2026-Kevin/Data_intelligence/tree/amir) | API V1, fiches clients, prompt, documentation |
 | [app-hackathon, branche `develop`](https://github.com/Hetic-Hackathon-Givaudan-2026-Kevin/app-hackathon/tree/develop) | Prototype de l'équipe Tech (Next.js) |
 

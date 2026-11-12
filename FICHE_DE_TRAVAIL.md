@@ -1,6 +1,6 @@
 # Fiche de travail – API RAG « nom du client → 3 questions »
 
-Équipe G03 · Data · Amir Meraka · mise à jour le 12/11/2026 à 21 h 45.
+Équipe G03 · Data · Amir Meraka · mise à jour le 12/11/2026 à 23 h 35.
 Cette fiche sert à **suivre, reproduire et expliquer** le travail. Toutes les données sont fictives.
 
 ## 1. La demande et son état
@@ -11,8 +11,8 @@ Cette fiche sert à **suivre, reproduire et expliquer** le travail. Toutes les d
 | 2 | Faire ingérer des fiches clients au modèle choisi | ✅ Fait | `ingest_clients.py` : 6 fiches, 36 morceaux dans ChromaDB |
 | 3 | Partager le nouveau dépôt | ✅ Fait | `Amir239278/Gr03-Marvels-MD4`, branche `Amir` |
 | 4 | Mettre temporairement en ligne avec ngrok | ✅ Fait | `https://vowel-paramount-lisp.ngrok-free.dev` (tant que le PC est allumé) |
-| 5 | Envoyer le lien ngrok et le dépôt à Tech | ⏳ À faire | Message à Kevin (section 6) |
-| 6 | Livrable du jour avant 23 h 59 | 🟡 Rédigé, avec les résultats de l'évaluation | `LIVRABLE_DATA_G03.md`, `docs/evaluation.md` ; reste à le déposer dans le dépôt de l'équipe |
+| 5 | Envoyer le lien ngrok et le dépôt à Tech | ✅ Fait | Message à Kevin (section 6) |
+| 6 | Livrable du jour avant 23 h 59 | ✅ Fait | `LIVRABLE_DATA_G03.md`, `docs/evaluation.md`, fusionnés dans `main` du dépôt de l'équipe (PR n° 2) |
 
 ## 2. Comment ça marche, en 5 phrases
 
@@ -122,9 +122,9 @@ Clients disponibles : `GET /clients` (Maison Nova Drinks, Nordic Food Industries
 
 - [x] Push sur la branche `Amir`.
 - [x] `python evaluer.py` : 29/30, chiffres reportés dans le livrable.
-- [ ] Pousser `docs/evaluation.md` et le livrable à jour.
-- [ ] Déposer `LIVRABLE_DATA_G03.md` dans le dépôt de l'équipe.
-- [ ] Envoyer le dépôt et le lien ngrok à Kevin.
+- [x] Pousser `docs/evaluation.md` et le livrable à jour.
+- [x] Déposer `LIVRABLE_DATA_G03.md` dans le dépôt de l'équipe.
+- [x] Envoyer le dépôt et le lien ngrok à Kevin.
 - [ ] Vérifier la liste du document `2.livrables.pdf` (canal « ressources ») : elle n'a pas été relue ici.
 - [ ] `benchmark_llm.pdf` à la racine du dépôt : absent pour l'instant.
 - [ ] Faire relire les questions par un commercial senior.

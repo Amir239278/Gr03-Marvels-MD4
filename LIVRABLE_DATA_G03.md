@@ -1,7 +1,7 @@
 # Livrable Data – groupe G03 (Marvel)
 
 **Givaudan AI Challenge 2026 · Défi 01 « La relation commerciale à l'ère de l'IA » · Livrable du jeudi 12/11/2026**
-Rédigé par Amir Meraka (équipe Data). **Toutes les données du prototype sont fictives.**
+Équipe Data : Amir Meraka, Ossama Farhaoui et Evrad Marold Okoue Nfane. Document rédigé par Amir Meraka. **Toutes les données du prototype sont fictives.**
 
 | Dépôt | Contenu |
 |---|---|

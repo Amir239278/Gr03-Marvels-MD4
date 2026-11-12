@@ -1,0 +1,333 @@
+{
+  "modele": "qwen2.5:1.5b",
+  "recherche": [
+    {
+      "requete": "Nouvelle gamme de boissons fonctionnelles",
+      "attendu": "Maison Nova Drinks",
+      "top1": true,
+      "top3": true
+    },
+    {
+      "requete": "Extension d'une gamme aromatique",
+      "attendu": "Maison Nova Drinks",
+      "top1": true,
+      "top3": true
+    },
+    {
+      "requete": "Développement d'une formulation végétale",
+      "attendu": "Nordic Food Industries",
+      "top1": true,
+      "top3": true
+    },
+    {
+      "requete": "Amélioration de la texture d'un produit",
+      "attendu": "Nordic Food Industries",
+      "top1": true,
+      "top3": true
+    },
+    {
+      "requete": "Optimisation d'une formulation existante",
+      "attendu": "Nordic Food Industries",
+      "top1": true,
+      "top3": true
+    },
+    {
+      "requete": "Nouvelle référence aromatique pour une marque de distributeur",
+      "attendu": "Alimenta Distribution",
+      "top1": true,
+      "top3": true
+    },
+    {
+      "requete": "Réduction du sucre sur une gamme de boissons",
+      "attendu": "PepsiCo",
+      "top1": true,
+      "top3": true
+    },
+    {
+      "requete": "Snacks à teneur réduite en sel",
+      "attendu": "PepsiCo",
+      "top1": true,
+      "top3": true
+    },
+    {
+      "requete": "Nouvelle saveur saisonnière pour une boisson",
+      "attendu": "PepsiCo",
+      "top1": true,
+      "top3": true
+    },
+    {
+      "requete": "Alternative végétale à un produit laitier",
+      "attendu": "Danone",
+      "top1": true,
+      "top3": true
+    },
+    {
+      "requete": "Masquage d'amertume sur une boisson enrichie en protéines",
+      "attendu": "Nestlé",
+      "top1": true,
+      "top3": true
+    },
+    {
+      "requete": "Extension de la gamme de barres protéinées",
+      "attendu": "Nestlé",
+      "top1": true,
+      "top3": true
+    }
+  ],
+  "noms": [
+    {
+      "nom": "pepsico",
+      "attendu": "PepsiCo",
+      "ok": true
+    },
+    {
+      "nom": "NESTLE",
+      "attendu": "Nestlé",
+      "ok": true
+    },
+    {
+      "nom": "nordic food",
+      "attendu": "Nordic Food Industries",
+      "ok": true
+    },
+    {
+      "nom": "Maison Nova",
+      "attendu": "Maison Nova Drinks",
+      "ok": true
+    },
+    {
+      "nom": "  danone ",
+      "attendu": "Danone",
+      "ok": true
+    },
+    {
+      "nom": "alimenta distribution",
+      "attendu": "Alimenta Distribution",
+      "ok": true
+    },
+    {
+      "nom": "Coca-Cola",
+      "attendu": "refus",
+      "ok": true
+    },
+    {
+      "nom": "Unilever",
+      "attendu": "refus",
+      "ok": true
+    },
+    {
+      "nom": "xyz",
+      "attendu": "refus",
+      "ok": true
+    },
+    {
+      "nom": "n",
+      "attendu": "refus",
+      "ok": true
+    },
+    {
+      "nom": "(vide)",
+      "attendu": "refus",
+      "ok": true
+    },
+    {
+      "nom": "Pepsi Danone",
+      "attendu": "refus",
+      "ok": true
+    }
+  ],
+  "generation": [
+    {
+      "client": "Maison Nova Drinks",
+      "v2_format": true,
+      "source": "modele",
+      "questions_du_modele": 3,
+      "v2_duree_s": 50.4,
+      "categories_distinctes": 3,
+      "sans_fuite": true,
+      "questions_ancrees": 3,
+      "questions": [
+        {
+          "question": "Quelles sont les objectifs spécifiques de la nouvelle gamme de boissons fonctionnelles que nous avons discutées récemment ?",
+          "objectif": "Identifier les objectifs spécifiques de la nouvelle gamme de boissons fonctionnelles pour comprendre les besoins et les attentes du client.",
+          "information_recherchee": "Objectifs du client",
+          "origine": "modele"
+        },
+        {
+          "question": "Quels sont les contraintes techniques spécifiques à la formulation de cette nouvelle gamme de boissons fonctionnelles ?",
+          "objectif": "Rechercher les contraintes techniques spécifiques à la formulation de la nouvelle gamme de boissons fonctionnelles pour faciliter la prise de décision.",
+          "information_recherchee": "Contraintes techniques",
+          "origine": "modele"
+        },
+        {
+          "question": "Quelles sont les contraintes budgétaires spécifiques à la mise en place de cette nouvelle gamme de boissons fonctionnelles ?",
+          "objectif": "Rechercher les contraintes budgétaires spécifiques à la mise en place de la nouvelle gamme de boissons fonctionnelles pour faciliter la prise de décision.",
+          "information_recherchee": "Contraintes budgétaires",
+          "origine": "modele"
+        }
+      ],
+      "reussi": true,
+      "v1_format": false,
+      "v1_duree_s": 16.2
+    },
+    {
+      "client": "Nordic Food Industries",
+      "v2_format": true,
+      "source": "modele",
+      "questions_du_modele": 3,
+      "v2_duree_s": 33.5,
+      "categories_distinctes": 2,
+      "sans_fuite": true,
+      "questions_ancrees": 2,
+      "questions": [
+        {
+          "question": "Quels sont les besoins spécifiques que vous avez identifiés pour votre entreprise actuelle ?",
+          "objectif": "Identifier les besoins spécifiques de la clientèle pour améliorer les produits Nordic Food Industries.",
+          "information_recherchee": "Objectifs du client",
+          "origine": "modele"
+        },
+        {
+          "question": "Quels sont les contraintes techniques que vous rencontrez dans votre projet actuel ?",
+          "objectif": "Identifier les contraintes techniques spécifiques pour optimiser la formulation végétale.",
+          "information_recherchee": "Contraintes techniques",
+          "origine": "modele"
+        },
+        {
+          "question": "Quels sont les objectifs de votre projet actuel pour améliorer la texture d'un produit existant ?",
+          "objectif": "Identifier les objectifs de la clientèle pour améliorer la texture d'un produit existant.",
+          "information_recherchee": "Objectifs du client",
+          "origine": "modele"
+        }
+      ],
+      "reussi": true,
+      "v1_format": false,
+      "v1_duree_s": 15.7
+    },
+    {
+      "client": "Alimenta Distribution",
+      "v2_format": false,
+      "source": "mixte",
+      "questions_du_modele": 2,
+      "v2_duree_s": 31.9,
+      "categories_distinctes": 3,
+      "sans_fuite": true,
+      "questions_ancrees": 3,
+      "questions": [
+        {
+          "question": "Quelles sont les principales tendances de consommation observées dans le secteur alimentaire ces derniers mois ?",
+          "objectif": "Identifier les tendances de consommation actuelles pour évaluer la faisabilité de la nouvelle référence aromatique.",
+          "information_recherchee": "Objectifs du client",
+          "origine": "modele"
+        },
+        {
+          "question": "Quelle est la demande potentielle pour une nouvelle référence aromatique dans le marché de la distribution alimentaire ?",
+          "objectif": "Vérifier si la demande existe et si elle pourrait être satisfait par la nouvelle référence.",
+          "information_recherchee": "Besoin réel",
+          "origine": "modele"
+        }
+      ],
+      "reussi": false,
+      "v1_format": false,
+      "v1_duree_s": 16.7
+    },
+    {
+      "client": "PepsiCo",
+      "v2_format": true,
+      "source": "modele",
+      "questions_du_modele": 3,
+      "v2_duree_s": 41.4,
+      "categories_distinctes": 2,
+      "sans_fuite": true,
+      "questions_ancrees": 3,
+      "questions": [
+        {
+          "question": "Quel est le niveau de réduction de sucre que vous souhaitez atteindre pour votre gamme de boissons ?",
+          "objectif": "Identifier les objectifs de réduction de sucre que le client souhaite atteindre pour une gamme de boissons.",
+          "information_recherchee": "Objectifs du client",
+          "origine": "modele"
+        },
+        {
+          "question": "Quelles sont les contraintes techniques liées à la réduction du sucre dans votre gamme de boissons ?",
+          "objectif": "Vérifier les contraintes techniques liées à la réduction du sucre pour une gamme de boissons.",
+          "information_recherchee": "Contraintes techniques",
+          "origine": "modele"
+        },
+        {
+          "question": "Quelle est la date de la prochaine action pour la réduction du sucre dans votre gamme de boissons ?",
+          "objectif": "Confirmer les objectifs de réduction de sucre et les contraintes de goût pour une gamme de boissons.",
+          "information_recherchee": "Objectifs du client",
+          "origine": "modele"
+        }
+      ],
+      "reussi": true,
+      "v1_format": false,
+      "v1_duree_s": 24.2
+    },
+    {
+      "client": "Danone",
+      "v2_format": true,
+      "source": "modele",
+      "questions_du_modele": 3,
+      "v2_duree_s": 33.8,
+      "categories_distinctes": 3,
+      "sans_fuite": true,
+      "questions_ancrees": 3,
+      "questions": [
+        {
+          "question": "Quels sont les avantages potentiels de la production d'un produit laitier végétal pour Danone ?",
+          "objectif": "Identifier les avantages potentiels de la production d'un produit laitier végétal pour comprendre l'intérêt du client pour cette alternative.",
+          "information_recherchee": "Objectifs du client",
+          "origine": "modele"
+        },
+        {
+          "question": "Quelles sont les principales contraintes techniques à considérer pour la production d'un produit laitier végétal ?",
+          "objectif": "Analyser les contraintes techniques pour évaluer la faisabilité de la production d'un produit laitier végétal.",
+          "information_recherchee": "Contraintes techniques",
+          "origine": "modele"
+        },
+        {
+          "question": "Quelle est la date de début de l'opération de production de produits laitiers végétaux pour Danone ?",
+          "objectif": "Confirmer la date de début de l'opération de production de produits laitiers végétaux pour Danone, afin de planifier les actions futures.",
+          "information_recherchee": "Calendrier",
+          "origine": "modele"
+        }
+      ],
+      "reussi": true,
+      "v1_format": false,
+      "v1_duree_s": 8.0
+    },
+    {
+      "client": "Nestlé",
+      "v2_format": true,
+      "source": "modele",
+      "questions_du_modele": 3,
+      "v2_duree_s": 33.0,
+      "categories_distinctes": 2,
+      "sans_fuite": true,
+      "questions_ancrees": 2,
+      "questions": [
+        {
+          "question": "Quels sont les besoins spécifiques de la clientèle de Nestlé en matière de goût pour les produits de la nutrition ?",
+          "objectif": "Identifier les besoins spécifiques de la clientèle pour les produits de la nutrition.",
+          "information_recherchee": "Objectifs du client",
+          "origine": "modele"
+        },
+        {
+          "question": "Quels sont les contraintes techniques de la formulation actuellement à confirmer pour la boisson nutritionnelle ?",
+          "objectif": "Rappeler les contraintes techniques de la formulation à confirmer.",
+          "information_recherchee": "Contraintes techniques",
+          "origine": "modele"
+        },
+        {
+          "question": "Quels sont les intérêts exprimés par la clientèle de Nestlé pour de nouveaux goûts dans le contexte du projet de barre protéinée ?",
+          "objectif": "Identifier les intérêts exprimés par la clientèle pour de nouveaux goûts.",
+          "information_recherchee": "Objectifs du client",
+          "origine": "modele"
+        }
+      ],
+      "reussi": true,
+      "v1_format": false,
+      "v1_duree_s": 13.0
+    }
+  ]
+}

@@ -1,0 +1,915 @@
+[
+  {
+    "identite": {
+      "id": "1",
+      "name": "Maison Nova Drinks",
+      "sector": "Boissons",
+      "country": "France",
+      "account_manager": "Thomas Leroy",
+      "relationship_status": "Client stratégique",
+      "last_updated": "05/11/2026"
+    },
+    "indicateurs": {
+      "projets_actifs": 3,
+      "opportunites_detectees": 2,
+      "opportunites_a_qualifier": 1
+    },
+    "synthese": {
+      "situation": "Client stratégique avec trois projets actifs et un échange récent sur une nouvelle gamme.",
+      "important_projects": [
+        "Boisson pétillante aux agrumes",
+        "Gamme de thés glacés",
+        "Sirop premium"
+      ],
+      "expressed_needs": [
+        "Explorer une nouvelle catégorie de boissons",
+        "Profils aromatiques naturels"
+      ],
+      "recent_signals": [
+        "Intérêt exprimé pour une nouvelle catégorie lors du dernier échange"
+      ],
+      "attention_points": [
+        "Objectifs et contraintes de formulation à confirmer",
+        "Opportunité sur la nouvelle gamme à qualifier"
+      ]
+    },
+    "historique": [
+      {
+        "date": "2026-11-05",
+        "event": "Échange commercial sur une nouvelle gamme"
+      },
+      {
+        "date": "2026-10-20",
+        "event": "Envoi d'un échantillon"
+      },
+      {
+        "date": "2026-10-10",
+        "event": "Projet de formulation lancé"
+      },
+      {
+        "date": "2026-09-18",
+        "event": "Rendez-vous de cadrage sur l'évolution du portefeuille"
+      }
+    ],
+    "projets": [
+      {
+        "id": "proj-1a",
+        "client_id": "1",
+        "name": "Boisson pétillante aux agrumes",
+        "description": "Formulation d'une boisson pétillante au profil agrumes.",
+        "status": "actif",
+        "start_date": "2026-10-10"
+      },
+      {
+        "id": "proj-1b",
+        "client_id": "1",
+        "name": "Gamme de thés glacés",
+        "description": "Arômes naturels pour une gamme de thés glacés.",
+        "status": "actif",
+        "start_date": "2026-06-15"
+      },
+      {
+        "id": "proj-1c",
+        "client_id": "1",
+        "name": "Sirop premium",
+        "description": "Travail sur le profil aromatique d'un sirop haut de gamme.",
+        "status": "actif",
+        "start_date": "2026-03-02"
+      }
+    ],
+    "opportunites": [
+      {
+        "id": "opp-1a",
+        "client_id": "1",
+        "title": "Nouvelle gamme de boissons fonctionnelles",
+        "description": "Le client explore une nouvelle catégorie de boissons fonctionnelles.",
+        "category": "Nouvelle gamme",
+        "status": "a_qualifier",
+        "priority": "haute",
+        "estimated_potential": "elevee",
+        "feasibility": "a_confirmer",
+        "complexity": "moyenne",
+        "next_action": "Organiser un échange sur les objectifs et contraintes de formulation.",
+        "signaux": [
+          {
+            "id": "sig-1a",
+            "opportunity_id": "opp-1a",
+            "description": "Intérêt exprimé pour une nouvelle catégorie.",
+            "source_type": "compte_rendu",
+            "source_date": "2026-11-05",
+            "confidence": "moyenne",
+            "evidence_type": "fait"
+          }
+        ]
+      },
+      {
+        "id": "opp-1b",
+        "client_id": "1",
+        "title": "Extension d'une gamme aromatique",
+        "description": "Un projet existant et l'évolution du portefeuille ouvrent la possibilité d'étendre une gamme aromatique.",
+        "category": "Extension de gamme",
+        "status": "detectee",
+        "priority": "moyenne",
+        "estimated_potential": "moyenne",
+        "feasibility": "moyenne",
+        "complexity": "faible",
+        "next_action": "Vérifier l'intérêt du client pour une extension de la gamme actuelle.",
+        "signaux": [
+          {
+            "id": "sig-1b",
+            "opportunity_id": "opp-1b",
+            "description": "Projet existant et évolution du portefeuille.",
+            "source_type": "historique",
+            "source_date": "2026-10-10",
+            "confidence": "moyenne",
+            "evidence_type": "hypothese"
+          }
+        ]
+      }
+    ],
+    "questions_preparatoires": [
+      {
+        "question": "Pour cette nouvelle gamme de boissons fonctionnelles, quel bénéfice voulez-vous mettre en avant en priorité (énergie, détente, immunité…) ?",
+        "pourquoi": "Le dernier échange confirme l'intérêt, mais pas le bénéfice visé : c'est la base du brief pour les équipes de création.",
+        "information_recherchee": "Besoin réel",
+        "lien": "opp-1a"
+      },
+      {
+        "question": "Quel budget prévisionnel avez-vous prévu pour ce lancement ?",
+        "pourquoi": "Le budget n'a pas été évoqué lors du rendez-vous du 05/11 ; sans lui, impossible de choisir entre une solution existante et un développement spécifique.",
+        "information_recherchee": "Contraintes budgétaires",
+        "lien": "opp-1a"
+      },
+      {
+        "question": "Souhaitez-vous que vos prochains produits reprennent les profils naturels de vos thés glacés, ou partir sur une nouvelle signature aromatique ?",
+        "pourquoi": "L'extension de gamme est une hypothèse tirée de l'historique : la question vérifie l'intérêt sans l'affirmer.",
+        "information_recherchee": "Objectifs du client",
+        "lien": "opp-1b"
+      }
+    ],
+    "a_confirmer": [
+      "Faisabilité de « Nouvelle gamme de boissons fonctionnelles »",
+      "Hypothèse à vérifier : Projet existant et évolution du portefeuille.",
+      "Objectifs et contraintes de formulation à confirmer",
+      "Opportunité sur la nouvelle gamme à qualifier"
+    ],
+    "meta": {
+      "donnees": "fictives",
+      "questions": "générées par IA (Claude) avec prompt_fiche_client.md, à relire par l'équipe Data",
+      "source": "jeu de données Tech (clients.json, projects.json, opportunities.json, signals.json, clients-insights.json)"
+    }
+  },
+  {
+    "identite": {
+      "id": "2",
+      "name": "Nordic Food Industries",
+      "sector": "Agroalimentaire",
+      "country": "Danemark",
+      "account_manager": "Marie Curie",
+      "relationship_status": "Actif",
+      "last_updated": "04/11/2026"
+    },
+    "indicateurs": {
+      "projets_actifs": 2,
+      "opportunites_detectees": 3,
+      "opportunites_a_qualifier": 1
+    },
+    "synthese": {
+      "situation": "Client actif avec deux projets en cours et plusieurs pistes d'amélioration identifiées.",
+      "important_projects": [
+        "Sauce crémeuse",
+        "Plat cuisiné"
+      ],
+      "expressed_needs": [
+        "Alternatives végétales",
+        "Meilleure texture sur un produit existant"
+      ],
+      "recent_signals": [
+        "Demande récente sur les alternatives végétales",
+        "Retour technique sur un projet précédent"
+      ],
+      "attention_points": [
+        "Contrainte budgétaire déjà communiquée",
+        "Faisabilité de la formulation végétale à confirmer"
+      ]
+    },
+    "historique": [
+      {
+        "date": "2026-11-04",
+        "event": "Demande d'alternatives végétales reçue"
+      },
+      {
+        "date": "2026-10-22",
+        "event": "Retour technique sur la texture d'un produit"
+      },
+      {
+        "date": "2026-10-09",
+        "event": "Contrainte budgétaire communiquée en rendez-vous"
+      },
+      {
+        "date": "2026-08-20",
+        "event": "Lancement du projet d'optimisation de recette"
+      }
+    ],
+    "projets": [
+      {
+        "id": "proj-2a",
+        "client_id": "2",
+        "name": "Sauce crémeuse",
+        "description": "Amélioration de la texture d'une sauce crémeuse.",
+        "status": "actif",
+        "start_date": "2026-05-12"
+      },
+      {
+        "id": "proj-2b",
+        "client_id": "2",
+        "name": "Plat cuisiné",
+        "description": "Optimisation de la recette d'un plat cuisiné.",
+        "status": "actif",
+        "start_date": "2026-08-20"
+      }
+    ],
+    "opportunites": [
+      {
+        "id": "opp-2a",
+        "client_id": "2",
+        "title": "Développement d'une formulation végétale",
+        "description": "Le client s'intéresse aux alternatives végétales.",
+        "category": "Formulation végétale",
+        "status": "a_qualifier",
+        "priority": "haute",
+        "estimated_potential": "elevee",
+        "feasibility": "a_confirmer",
+        "complexity": "elevee",
+        "next_action": "Confirmer le besoin et le périmètre de la formulation végétale.",
+        "signaux": [
+          {
+            "id": "sig-2a",
+            "opportunity_id": "opp-2a",
+            "description": "Demande concernant des alternatives végétales.",
+            "source_type": "demande_client",
+            "source_date": "2026-11-04",
+            "confidence": "haute",
+            "evidence_type": "fait"
+          }
+        ]
+      },
+      {
+        "id": "opp-2b",
+        "client_id": "2",
+        "title": "Amélioration de la texture d'un produit",
+        "description": "Un retour technique sur un projet précédent signale un point d'amélioration de la texture.",
+        "category": "Amélioration produit",
+        "status": "detectee",
+        "priority": "moyenne",
+        "estimated_potential": null,
+        "feasibility": "moyenne",
+        "complexity": "moyenne",
+        "next_action": "Revenir sur le retour technique du projet précédent avec le client.",
+        "signaux": [
+          {
+            "id": "sig-2b",
+            "opportunity_id": "opp-2b",
+            "description": "Retour technique sur un projet précédent.",
+            "source_type": "historique",
+            "source_date": "2026-10-22",
+            "confidence": "moyenne",
+            "evidence_type": "fait"
+          }
+        ]
+      },
+      {
+        "id": "opp-2c",
+        "client_id": "2",
+        "title": "Optimisation d'une formulation existante",
+        "description": "Une contrainte budgétaire communiquée appelle une optimisation de la formulation.",
+        "category": "Optimisation de formulation",
+        "status": "detectee",
+        "priority": "basse",
+        "estimated_potential": "faible",
+        "feasibility": "elevee",
+        "complexity": "faible",
+        "next_action": "Proposer une revue de formulation compatible avec le budget.",
+        "signaux": [
+          {
+            "id": "sig-2c",
+            "opportunity_id": "opp-2c",
+            "description": "Contrainte budgétaire communiquée.",
+            "source_type": "compte_rendu",
+            "source_date": "2026-10-09",
+            "confidence": "haute",
+            "evidence_type": "fait"
+          }
+        ]
+      }
+    ],
+    "questions_preparatoires": [
+      {
+        "question": "Pour la formulation végétale, quels critères de goût et de texture sont non négociables pour vous ?",
+        "pourquoi": "Le besoin végétal est confirmé sur deux produits, mais la faisabilité dépend de ces critères.",
+        "information_recherchee": "Contraintes techniques",
+        "lien": "opp-2a"
+      },
+      {
+        "question": "Sur la sauce crémeuse, qu'est-ce qui ne vous a pas convenu dans la texture lors du dernier essai ?",
+        "pourquoi": "Le retour technique du 22/10 existe, mais son contenu précis n'est pas documenté.",
+        "information_recherchee": "Besoin réel",
+        "lien": "opp-2b"
+      },
+      {
+        "question": "Quel coût cible devons-nous respecter pour la revue de votre formulation existante ?",
+        "pourquoi": "Une contrainte budgétaire a été communiquée le 09/10, sans montant : il faut un chiffre pour proposer une solution compatible.",
+        "information_recherchee": "Contraintes budgétaires",
+        "lien": "opp-2c"
+      }
+    ],
+    "a_confirmer": [
+      "Faisabilité de « Développement d'une formulation végétale »",
+      "Potentiel de « Amélioration de la texture d'un produit » (non renseigné)",
+      "Contrainte budgétaire déjà communiquée",
+      "Faisabilité de la formulation végétale à confirmer"
+    ],
+    "meta": {
+      "donnees": "fictives",
+      "questions": "générées par IA (Claude) avec prompt_fiche_client.md, à relire par l'équipe Data",
+      "source": "jeu de données Tech (clients.json, projects.json, opportunities.json, signals.json, clients-insights.json)"
+    }
+  },
+  {
+    "identite": {
+      "id": "3",
+      "name": "Alimenta Distribution",
+      "sector": "Distribution alimentaire",
+      "country": "Espagne",
+      "account_manager": "Marc Lelièvre",
+      "relationship_status": "Actif",
+      "last_updated": "02/11/2026"
+    },
+    "indicateurs": {
+      "projets_actifs": 1,
+      "opportunites_detectees": 1,
+      "opportunites_a_qualifier": 0
+    },
+    "synthese": {
+      "situation": "Distributeur avec un projet actif et une première piste liée à une tendance de consommation.",
+      "important_projects": [
+        "Biscuits aromatisés marque distributeur"
+      ],
+      "expressed_needs": [
+        "Nouvelles références pour sa marque de distributeur"
+      ],
+      "recent_signals": [
+        "Tendance de consommation relevée par la veille marché"
+      ],
+      "attention_points": [
+        "Signal à confirmer : il repose sur une veille et non sur une demande du client"
+      ]
+    },
+    "historique": [
+      {
+        "date": "2026-11-02",
+        "event": "Tendance de consommation relevée par la veille marché"
+      },
+      {
+        "date": "2026-10-15",
+        "event": "Point de suivi sur le projet de gamme"
+      },
+      {
+        "date": "2026-09-14",
+        "event": "Lancement du projet de marque distributeur"
+      }
+    ],
+    "projets": [
+      {
+        "id": "proj-3a",
+        "client_id": "3",
+        "name": "Biscuits aromatisés marque distributeur",
+        "description": "Gamme de biscuits aromatisés pour une marque de distributeur.",
+        "status": "actif",
+        "start_date": "2026-09-14"
+      }
+    ],
+    "opportunites": [
+      {
+        "id": "opp-3a",
+        "client_id": "3",
+        "title": "Nouvelle référence aromatique pour une marque de distributeur",
+        "description": "Une tendance de consommation laisse entrevoir une demande potentielle.",
+        "category": "Nouvelle référence",
+        "status": "detectee",
+        "priority": "moyenne",
+        "estimated_potential": "moyenne",
+        "feasibility": "a_confirmer",
+        "complexity": "moyenne",
+        "next_action": "Présenter la tendance et sonder l'intérêt du distributeur.",
+        "signaux": [
+          {
+            "id": "sig-3a",
+            "opportunity_id": "opp-3a",
+            "description": "Tendance de consommation et demande potentielle.",
+            "source_type": "veille_marche",
+            "source_date": "2026-11-02",
+            "confidence": "faible",
+            "evidence_type": "hypothese"
+          }
+        ]
+      }
+    ],
+    "questions_preparatoires": [
+      {
+        "question": "Quelles nouvelles saveurs vos clients en magasin vous demandent-ils le plus en ce moment ?",
+        "pourquoi": "L'opportunité repose sur une veille de marché, pas sur une demande du client : la question vérifie si le besoin existe vraiment.",
+        "information_recherchee": "Besoin réel",
+        "lien": "opp-3a"
+      },
+      {
+        "question": "Quel prix de vente visez-vous pour une nouvelle référence de votre marque distributeur ?",
+        "pourquoi": "Le prix cible a été demandé le 02/11, sans réponse : il conditionne le choix de l'arôme.",
+        "information_recherchee": "Contraintes budgétaires",
+        "lien": "opp-3a"
+      },
+      {
+        "question": "Qui décide du lancement d'une nouvelle référence chez vous, et selon quels critères ?",
+        "pourquoi": "Aucune information sur le processus de décision du distributeur.",
+        "information_recherchee": "Critères de décision",
+        "lien": "opp-3a"
+      }
+    ],
+    "a_confirmer": [
+      "Faisabilité de « Nouvelle référence aromatique pour une marque de distributeur »",
+      "Hypothèse à vérifier : Tendance de consommation et demande potentielle.",
+      "Signal à confirmer : il repose sur une veille et non sur une demande du client"
+    ],
+    "meta": {
+      "donnees": "fictives",
+      "questions": "générées par IA (Claude) avec prompt_fiche_client.md, à relire par l'équipe Data",
+      "source": "jeu de données Tech (clients.json, projects.json, opportunities.json, signals.json, clients-insights.json)"
+    }
+  },
+  {
+    "identite": {
+      "id": "4",
+      "name": "PepsiCo",
+      "sector": "Boissons & Snacks",
+      "country": "États-Unis",
+      "account_manager": "Thomas Leroy",
+      "relationship_status": "Client stratégique",
+      "last_updated": "01/11/2026"
+    },
+    "indicateurs": {
+      "projets_actifs": 4,
+      "opportunites_detectees": 3,
+      "opportunites_a_qualifier": 2
+    },
+    "synthese": {
+      "situation": "Client stratégique avec quatre projets actifs, centrés sur la réduction du sucre et du sel.",
+      "important_projects": [
+        "Boisson zéro sucre",
+        "Gamme de chips à teneur réduite en sel",
+        "Boisson énergisante"
+      ],
+      "expressed_needs": [
+        "Réduire le sucre sans dégrader le goût",
+        "Réduire le sel sur les snacks"
+      ],
+      "recent_signals": [
+        "Objectif de réduction du sucre évoqué récemment",
+        "Demande d'étude sur la réduction du sel"
+      ],
+      "attention_points": [
+        "Objectifs de réduction à confirmer avec le client",
+        "Deux opportunités à qualifier"
+      ]
+    },
+    "historique": [
+      {
+        "date": "2026-11-01",
+        "event": "Échange sur la réduction du sucre d'une gamme de boissons"
+      },
+      {
+        "date": "2026-10-14",
+        "event": "Demande d'étude sur la réduction du sel"
+      },
+      {
+        "date": "2026-09-07",
+        "event": "Lancement du projet de chips à teneur réduite en sel"
+      },
+      {
+        "date": "2026-07-13",
+        "event": "Début du projet de boisson zéro sucre"
+      }
+    ],
+    "projets": [
+      {
+        "id": "proj-4a",
+        "client_id": "4",
+        "name": "Boisson énergisante",
+        "description": "Travail sur le profil aromatique d'une boisson énergisante.",
+        "start_date": "2026-04-06",
+        "status": "actif"
+      },
+      {
+        "id": "proj-4b",
+        "client_id": "4",
+        "name": "Snack salé",
+        "description": "Exhausteur de goût pour un snack salé.",
+        "start_date": "2026-05-18",
+        "status": "actif"
+      },
+      {
+        "id": "proj-4c",
+        "client_id": "4",
+        "name": "Boisson zéro sucre",
+        "description": "Masquage de l'amertume d'une boisson sans sucre.",
+        "start_date": "2026-07-13",
+        "status": "actif"
+      },
+      {
+        "id": "proj-4d",
+        "client_id": "4",
+        "name": "Gamme de chips à teneur réduite en sel",
+        "description": "Arômes pour une gamme de chips moins salée.",
+        "start_date": "2026-09-07",
+        "status": "actif"
+      }
+    ],
+    "opportunites": [
+      {
+        "id": "opp-4a",
+        "client_id": "4",
+        "title": "Réduction du sucre sur une gamme de boissons",
+        "description": "Un objectif de réduction du sucre a été évoqué pour une gamme de boissons.",
+        "category": "Réduction de sucre",
+        "status": "a_qualifier",
+        "priority": "haute",
+        "estimated_potential": "elevee",
+        "feasibility": "a_confirmer",
+        "complexity": "elevee",
+        "next_action": "Confirmer les objectifs de réduction de sucre et les contraintes de goût.",
+        "signaux": [
+          {
+            "id": "sig-4a",
+            "opportunity_id": "opp-4a",
+            "description": "Objectif de réduction du sucre évoqué lors du dernier échange.",
+            "source_type": "compte_rendu",
+            "source_date": "2026-11-01",
+            "confidence": "haute",
+            "evidence_type": "fait"
+          }
+        ]
+      },
+      {
+        "id": "opp-4b",
+        "client_id": "4",
+        "title": "Snacks à teneur réduite en sel",
+        "description": "Le client a demandé une étude sur la réduction du sel.",
+        "category": "Réduction de sel",
+        "status": "a_qualifier",
+        "priority": "moyenne",
+        "estimated_potential": "moyenne",
+        "feasibility": "moyenne",
+        "complexity": "moyenne",
+        "next_action": "Qualifier le niveau de réduction attendu avec l'équipe produit du client.",
+        "signaux": [
+          {
+            "id": "sig-4b",
+            "opportunity_id": "opp-4b",
+            "description": "Demande d'étude sur la réduction du sel.",
+            "source_type": "demande_client",
+            "source_date": "2026-10-14",
+            "confidence": "moyenne",
+            "evidence_type": "fait"
+          }
+        ]
+      },
+      {
+        "id": "opp-4c",
+        "client_id": "4",
+        "title": "Nouvelle saveur saisonnière pour une boisson",
+        "description": "Les saveurs saisonnières suscitent un intérêt sur le marché.",
+        "category": "Nouvelle saveur",
+        "status": "detectee",
+        "priority": "basse",
+        "estimated_potential": "faible",
+        "feasibility": "elevee",
+        "complexity": "faible",
+        "next_action": "Présenter des pistes de saveurs lors du prochain point projet.",
+        "signaux": [
+          {
+            "id": "sig-4c",
+            "opportunity_id": "opp-4c",
+            "description": "Tendance aux saveurs saisonnières observée sur le marché.",
+            "source_type": "veille_marche",
+            "source_date": "2026-10-05",
+            "confidence": "faible",
+            "evidence_type": "hypothese"
+          }
+        ]
+      }
+    ],
+    "questions_preparatoires": [
+      {
+        "question": "Quel taux de réduction du sucre visez-vous, et sur quelles boissons en priorité ?",
+        "pourquoi": "L'intention est confirmée depuis le 01/11, mais l'objectif chiffré reste à obtenir.",
+        "information_recherchee": "Objectifs du client",
+        "lien": "opp-4a"
+      },
+      {
+        "question": "Comment allez-vous valider que le goût reste acceptable après la réduction (tests consommateurs, panel interne) ?",
+        "pourquoi": "Le critère de réussite conditionne le niveau de complexité technique du projet.",
+        "information_recherchee": "Critères de décision",
+        "lien": "opp-4a"
+      },
+      {
+        "question": "Pour vos snacks, quel niveau de réduction du sel attendez-vous, et pour quelle échéance ?",
+        "pourquoi": "La demande d'étude du 14/10 ne précise ni l'objectif ni le calendrier.",
+        "information_recherchee": "Calendrier",
+        "lien": "opp-4b"
+      }
+    ],
+    "a_confirmer": [
+      "Faisabilité de « Réduction du sucre sur une gamme de boissons »",
+      "Hypothèse à vérifier : Tendance aux saveurs saisonnières observée sur le marché.",
+      "Objectifs de réduction à confirmer avec le client",
+      "Deux opportunités à qualifier"
+    ],
+    "meta": {
+      "donnees": "fictives",
+      "questions": "générées par IA (Claude) avec prompt_fiche_client.md, à relire par l'équipe Data",
+      "source": "jeu de données Tech (clients.json, projects.json, opportunities.json, signals.json, clients-insights.json)"
+    }
+  },
+  {
+    "identite": {
+      "id": "5",
+      "name": "Danone",
+      "sector": "Produits laitiers",
+      "country": "France",
+      "account_manager": "Claire Moreau",
+      "relationship_status": "Actif",
+      "last_updated": "30/10/2026"
+    },
+    "indicateurs": {
+      "projets_actifs": 2,
+      "opportunites_detectees": 1,
+      "opportunites_a_qualifier": 1
+    },
+    "synthese": {
+      "situation": "Client actif avec deux projets en cours et une question récente sur le végétal.",
+      "important_projects": [
+        "Dessert lacté",
+        "Yaourt à boire"
+      ],
+      "expressed_needs": [
+        "Profils aromatiques adaptés aux produits laitiers",
+        "Premières réflexions sur le végétal"
+      ],
+      "recent_signals": [
+        "Question récente sur les alternatives végétales"
+      ],
+      "attention_points": [
+        "Besoin végétal à qualifier avant toute proposition"
+      ]
+    },
+    "historique": [
+      {
+        "date": "2026-10-30",
+        "event": "Question du client sur les alternatives végétales"
+      },
+      {
+        "date": "2026-10-08",
+        "event": "Retour sur l'échantillon d'arôme fruits rouges"
+      },
+      {
+        "date": "2026-09-21",
+        "event": "Lancement du projet de yaourt à boire"
+      }
+    ],
+    "projets": [
+      {
+        "id": "proj-5a",
+        "client_id": "5",
+        "name": "Dessert lacté",
+        "description": "Profil vanille pour un dessert lacté.",
+        "start_date": "2026-06-08",
+        "status": "actif"
+      },
+      {
+        "id": "proj-5b",
+        "client_id": "5",
+        "name": "Yaourt à boire",
+        "description": "Arôme fruits rouges pour un yaourt à boire.",
+        "start_date": "2026-09-21",
+        "status": "actif"
+      }
+    ],
+    "opportunites": [
+      {
+        "id": "opp-5a",
+        "client_id": "5",
+        "title": "Alternative végétale à un produit laitier",
+        "description": "Le client s'interroge sur des alternatives végétales.",
+        "category": "Alternative végétale",
+        "status": "a_qualifier",
+        "priority": "haute",
+        "estimated_potential": "elevee",
+        "feasibility": "a_confirmer",
+        "complexity": "elevee",
+        "next_action": "Qualifier l'intérêt du client pour une gamme végétale.",
+        "signaux": [
+          {
+            "id": "sig-5a",
+            "opportunity_id": "opp-5a",
+            "description": "Question posée sur les alternatives végétales.",
+            "source_type": "demande_client",
+            "source_date": "2026-10-30",
+            "confidence": "moyenne",
+            "evidence_type": "fait"
+          }
+        ]
+      }
+    ],
+    "questions_preparatoires": [
+      {
+        "question": "Si vous lanciez une première référence végétale, sur quel produit de votre gamme commenceriez-vous ?",
+        "pourquoi": "L'intérêt est exploratoire et aucun projet n'est défini : il faut un point de départ concret.",
+        "information_recherchee": "Besoin réel",
+        "lien": "opp-5a"
+      },
+      {
+        "question": "Qu'est-ce qui vous retient aujourd'hui de lancer un projet végétal (goût, texture, coût, demande des consommateurs) ?",
+        "pourquoi": "Identifier le frein principal permet de savoir où Givaudan peut aider.",
+        "information_recherchee": "Contraintes techniques",
+        "lien": "opp-5a"
+      },
+      {
+        "question": "Votre retour sur l'échantillon d'arôme fruits rouges du yaourt à boire est-il positif, et que faudrait-il ajuster ?",
+        "pourquoi": "Un retour sur l'échantillon a eu lieu le 08/10, mais son contenu n'est pas documenté ; le projet en cours conditionne la relation.",
+        "information_recherchee": "Objectifs du client",
+        "lien": "proj-5b"
+      }
+    ],
+    "a_confirmer": [
+      "Faisabilité de « Alternative végétale à un produit laitier »",
+      "Besoin végétal à qualifier avant toute proposition"
+    ],
+    "meta": {
+      "donnees": "fictives",
+      "questions": "générées par IA (Claude) avec prompt_fiche_client.md, à relire par l'équipe Data",
+      "source": "jeu de données Tech (clients.json, projects.json, opportunities.json, signals.json, clients-insights.json)"
+    }
+  },
+  {
+    "identite": {
+      "id": "6",
+      "name": "Nestlé",
+      "sector": "Nutrition",
+      "country": "Suisse",
+      "account_manager": "Pierre Martin",
+      "relationship_status": "Actif",
+      "last_updated": "28/10/2026"
+    },
+    "indicateurs": {
+      "projets_actifs": 3,
+      "opportunites_detectees": 2,
+      "opportunites_a_qualifier": 1
+    },
+    "synthese": {
+      "situation": "Client actif avec trois projets dans le domaine de la nutrition.",
+      "important_projects": [
+        "Boisson nutritionnelle",
+        "Barre protéinée",
+        "Céréales infantiles"
+      ],
+      "expressed_needs": [
+        "Masquer l'amertume des protéines",
+        "Profils de goût adaptés à la nutrition"
+      ],
+      "recent_signals": [
+        "Retour technique récent sur l'amertume d'une boisson"
+      ],
+      "attention_points": [
+        "Contraintes techniques de la formulation à confirmer"
+      ]
+    },
+    "historique": [
+      {
+        "date": "2026-10-28",
+        "event": "Retour technique sur l'amertume de la boisson nutritionnelle"
+      },
+      {
+        "date": "2026-10-12",
+        "event": "Point de suivi du projet de barre protéinée"
+      },
+      {
+        "date": "2026-09-02",
+        "event": "Lancement du projet de céréales infantiles"
+      }
+    ],
+    "projets": [
+      {
+        "id": "proj-6a",
+        "client_id": "6",
+        "name": "Boisson nutritionnelle",
+        "description": "Masquage de goût pour une boisson nutritionnelle.",
+        "start_date": "2026-03-23",
+        "status": "actif"
+      },
+      {
+        "id": "proj-6b",
+        "client_id": "6",
+        "name": "Barre protéinée",
+        "description": "Profil chocolat pour une barre protéinée.",
+        "start_date": "2026-06-29",
+        "status": "actif"
+      },
+      {
+        "id": "proj-6c",
+        "client_id": "6",
+        "name": "Céréales infantiles",
+        "description": "Arôme vanille pour des céréales infantiles.",
+        "start_date": "2026-09-02",
+        "status": "actif"
+      }
+    ],
+    "opportunites": [
+      {
+        "id": "opp-6a",
+        "client_id": "6",
+        "title": "Masquage d'amertume sur une boisson enrichie en protéines",
+        "description": "Un retour technique signale une amertume à corriger.",
+        "category": "Masquage de goût",
+        "status": "a_qualifier",
+        "priority": "haute",
+        "estimated_potential": "elevee",
+        "feasibility": "moyenne",
+        "complexity": "elevee",
+        "next_action": "Confirmer le besoin et les contraintes techniques de la formulation.",
+        "signaux": [
+          {
+            "id": "sig-6a",
+            "opportunity_id": "opp-6a",
+            "description": "Retour technique sur l'amertume d'une boisson.",
+            "source_type": "projet",
+            "source_date": "2026-10-28",
+            "confidence": "haute",
+            "evidence_type": "fait"
+          }
+        ]
+      },
+      {
+        "id": "opp-6b",
+        "client_id": "6",
+        "title": "Extension de la gamme de barres protéinées",
+        "description": "De nouveaux profils de goût ont été évoqués en suivi de projet.",
+        "category": "Extension de gamme",
+        "status": "detectee",
+        "priority": "moyenne",
+        "estimated_potential": "moyenne",
+        "feasibility": "elevee",
+        "complexity": "faible",
+        "next_action": "Évoquer de nouveaux profils de goût lors du prochain suivi du projet.",
+        "signaux": [
+          {
+            "id": "sig-6b",
+            "opportunity_id": "opp-6b",
+            "description": "Intérêt pour de nouveaux goûts exprimé en suivi de projet.",
+            "source_type": "compte_rendu",
+            "source_date": "2026-10-12",
+            "confidence": "moyenne",
+            "evidence_type": "hypothese"
+          }
+        ]
+      }
+    ],
+    "questions_preparatoires": [
+      {
+        "question": "Quelles contraintes d'étiquetage devons-nous respecter pour masquer l'amertume de la boisson protéinée (arômes naturels uniquement, allergènes) ?",
+        "pourquoi": "Le besoin est confirmé sur une protéine de pois ; il manque les contraintes réglementaires de la formulation.",
+        "information_recherchee": "Contraintes techniques",
+        "lien": "opp-6a"
+      },
+      {
+        "question": "À quelle date souhaitez-vous disposer de la version reformulée de la boisson ?",
+        "pourquoi": "Aucun calendrier n'est connu pour cette opportunité à priorité haute.",
+        "information_recherchee": "Calendrier",
+        "lien": "opp-6a"
+      },
+      {
+        "question": "Quels nouveaux profils de goût envisagez-vous pour élargir votre gamme de barres protéinées ?",
+        "pourquoi": "L'intérêt pour de nouveaux goûts est une hypothèse issue d'un suivi de projet : la question le vérifie.",
+        "information_recherchee": "Objectifs du client",
+        "lien": "opp-6b"
+      }
+    ],
+    "a_confirmer": [
+      "Hypothèse à vérifier : Intérêt pour de nouveaux goûts exprimé en suivi de projet.",
+      "Contraintes techniques de la formulation à confirmer"
+    ],
+    "meta": {
+      "donnees": "fictives",
+      "questions": "générées par IA (Claude) avec prompt_fiche_client.md, à relire par l'équipe Data",
+      "source": "jeu de données Tech (clients.json, projects.json, opportunities.json, signals.json, clients-insights.json)"
+    }
+  }
+]

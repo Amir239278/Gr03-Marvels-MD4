@@ -21,3 +21,9 @@ CHUNK_OVERLAP_PARAGRAPHS = int(os.getenv("CHUNK_OVERLAP_PARAGRAPHS", "1"))
 
 # Recherche
 TOP_K = int(os.getenv("TOP_K", "4"))
+
+# Fiches clients (route /questions-client)
+CLIENTS_DIR = Path(os.getenv("CLIENTS_DIR", BASE_DIR / "fiches_clients"))
+CLIENTS_COLLECTION = os.getenv("CLIENTS_COLLECTION", "clients")
+CLIENTS_TOP_K = int(os.getenv("CLIENTS_TOP_K", "6"))
+LLM_TIMEOUT = float(os.getenv("LLM_TIMEOUT", "120"))  # secondes avant le plan B

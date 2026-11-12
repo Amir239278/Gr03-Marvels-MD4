@@ -1,6 +1,6 @@
 # Fiche de travail – API RAG « nom du client → 3 questions »
 
-Équipe G03 · Data · Amir Meraka · mise à jour le 12/11/2026 à 23 h 35.
+Équipe G03 · Data : Amir Meraka, Ossama Farhaoui, Evrad Marold Okoue Nfane · fiche rédigée par Amir Meraka · mise à jour le 12/11/2026 à 23 h 40.
 Cette fiche sert à **suivre, reproduire et expliquer** le travail. Toutes les données sont fictives.
 
 ## 1. La demande et son état

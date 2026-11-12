@@ -1,6 +1,6 @@
 # Fiche de travail – API RAG « nom du client → 3 questions »
 
-Équipe G03 · Data · Amir Meraka · mise à jour le 12/11/2026 à 21 h 30.
+Équipe G03 · Data · Amir Meraka · mise à jour le 12/11/2026 à 21 h 45.
 Cette fiche sert à **suivre, reproduire et expliquer** le travail. Toutes les données sont fictives.
 
 ## 1. La demande et son état
@@ -9,10 +9,10 @@ Cette fiche sert à **suivre, reproduire et expliquer** le travail. Toutes les d
 |---|---|---|---|
 | 1 | Modifier l'API `hmicn/example-rag` : une route prend le nom d'un client et retourne 3 questions | ✅ Fait | `clients.py`, routes `POST /questions-client` et `GET /questions-client/{client}` |
 | 2 | Faire ingérer des fiches clients au modèle choisi | ✅ Fait | `ingest_clients.py` : 6 fiches, 36 morceaux dans ChromaDB |
-| 3 | Partager le nouveau dépôt | ⏳ Push en cours | `Amir239278/Gr03-Marvels-MD4`, branche `Amir` |
+| 3 | Partager le nouveau dépôt | ✅ Fait | `Amir239278/Gr03-Marvels-MD4`, branche `Amir` |
 | 4 | Mettre temporairement en ligne avec ngrok | ✅ Fait | `https://vowel-paramount-lisp.ngrok-free.dev` (tant que le PC est allumé) |
 | 5 | Envoyer le lien ngrok et le dépôt à Tech | ⏳ À faire | Message à Kevin (section 6) |
-| 6 | Livrable du jour avant 23 h 59 | 🟡 Rédigé | `LIVRABLE_DATA_G03.md` ; chiffres de `docs/evaluation.md` à ajouter |
+| 6 | Livrable du jour avant 23 h 59 | 🟡 Rédigé, avec les résultats de l'évaluation | `LIVRABLE_DATA_G03.md`, `docs/evaluation.md` ; reste à le déposer dans le dépôt de l'équipe |
 
 ## 2. Comment ça marche, en 5 phrases
 
@@ -98,11 +98,12 @@ Clients disponibles : `GET /clients` (Maison Nova Drinks, Nordic Food Industries
 
 | Question | Réponse courte |
 |---|---|
-| Quel modèle avez-vous choisi, et pourquoi ? | `qwen2.5:1.5b` pour générer (le plus rapide de nos modèles à respecter le schéma, 48 s mesurées), `nomic-embed-text` pour les embeddings. `gemma2:2b` reste possible par requête |
+| Quel modèle avez-vous choisi, et pourquoi ? | `qwen2.5:1.5b` pour générer : c'est le modèle par défaut du dépôt d'origine, léger, et il a respecté le schéma en 48 s lors du test du 12/11. `nomic-embed-text` pour les embeddings. Les autres modèles (`gemma2:2b`…) se choisissent par requête ; ils n'ont pas encore été mesurés avec le schéma |
 | Qu'est-ce que le modèle a « ingéré » ? | 6 fiches clients, découpées en 36 sections, vectorisées dans ChromaDB. Pas d'entraînement : c'est du RAG |
 | Comment éviter que le modèle invente ? | Il ne reçoit que la fiche du client demandé (recherche filtrée), avec interdiction d'inventer, un schéma JSON imposé et un contrôle des questions |
 | Et si le modèle se trompe ? | Exemple réel du 12/11 : 2 questions sur 3 utilisables, la 3e employait du vocabulaire interne. Depuis, ce cas est détecté et remplacé par une question préparée (`source: mixte`) |
-| Comment mesurez-vous la qualité ? | 30 cas : 12 de recherche, 12 de reconnaissance du nom, 6 de génération, plus une comparaison V1/V2 (`evaluer.py`) |
+| Comment mesurez-vous la qualité ? | 30 cas (`evaluer.py`) : 12 de recherche, 12 de reconnaissance du nom, 6 de génération. Résultat du 12/11 : **29/30**. Format respecté : 0/6 en V1, 5/6 en V2. Durée médiane : 34 s |
+| Les questions de l'IA sont-elles bonnes ? | La forme oui (17 sur 18 retenues), le fond pas toujours : à la lecture, environ la moitié sont utilisables telles quelles, les autres sont génériques ou maladroites. C'est la limite d'un petit modèle local ; les questions préparées restent la référence |
 | Quelles limites ? | Données fictives, petit modèle lent sur un PC sans carte graphique, questions non encore validées par un commercial senior |
 | Comment passer aux vraies données ? | Section 8 du livrable : connecteurs en lecture seule vers le CRM et l'outil de projets, veille de marché, tout converti en « signaux » |
 
@@ -119,8 +120,9 @@ Clients disponibles : `GET /clients` (Maison Nova Drinks, Nordic Food Industries
 
 ## 9. Reste à faire
 
-- [ ] Push sur la branche `Amir`.
-- [ ] `python evaluer.py`, puis reporter les chiffres dans le livrable et pousser `docs/evaluation.md`.
+- [x] Push sur la branche `Amir`.
+- [x] `python evaluer.py` : 29/30, chiffres reportés dans le livrable.
+- [ ] Pousser `docs/evaluation.md` et le livrable à jour.
 - [ ] Déposer `LIVRABLE_DATA_G03.md` dans le dépôt de l'équipe.
 - [ ] Envoyer le dépôt et le lien ngrok à Kevin.
 - [ ] Vérifier la liste du document `2.livrables.pdf` (canal « ressources ») : elle n'a pas été relue ici.

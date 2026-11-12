@@ -67,7 +67,7 @@ RAG local, sans entraînement. Aucune donnée ne sort du poste : les modèles to
 | Version | Méthode | Constat |
 |---|---|---|
 | V1 | Prompt seul, données de l'opportunité dans le prompt, JSON libre | Mesuré le 12/11 sur une opportunité : 1 modèle sur 4 respecte le format (`gemma2:2b`, 69 s) ; `llama3.2:1b` (27 s), `qwen2.5:1.5b` (45 s) et `llama3.2:3b` (98 s) échouent |
-| V2 | RAG sur les fiches clients + schéma JSON imposé à Ollama + lecture tolérante + plan B | Version en ligne. Résultats dans `docs/evaluation.md` |
+| V2 | RAG sur les fiches clients + schéma JSON imposé à Ollama + lecture tolérante + contrôle du vocabulaire + plan B | Version en ligne. Sur 6 clients avec `qwen2.5:1.5b` : format respecté 5 fois sur 6 (V1 : 0 sur 6), 17 questions sur 18 retenues |
 
 **Honnêteté du résultat** : chaque réponse indique sa `source` : `modele` (3 questions du LLM), `mixte` (questions du LLM complétées par des questions préparées) ou `simule` (3 questions préparées, si le modèle échoue ou dépasse le délai). Chaque question porte son `origine` : `modele` ou `prepare`.
 
@@ -83,9 +83,28 @@ Protocole automatisé par `python evaluer.py` (dépôt Gr03-Marvels-MD4), rappor
 
 Le script compare aussi V1 et V2 sur le respect du format et la durée.
 
+### Résultats (12/11/2026, 21 h 35, `qwen2.5:1.5b`) : 29 cas réussis sur 30
+
+| Famille | Réussis | Détail |
+|---|---|---|
+| Recherche | 12/12 | Bon client en première position à chaque fois |
+| Nom du client | 12/12 | 6 noms approximatifs reconnus, 6 noms refusés |
+| Génération V2 | 5/6 | 17 questions sur 18 retenues. Cas échoué : Alimenta Distribution, une question écartée par le contrôle et remplacée par une question préparée (`source: mixte`) |
+
+| Version | Méthode | Format respecté | Durée médiane |
+|---|---|---|---|
+| V1 | Prompt seul, JSON libre, lecture stricte | 0/6 | 16 s |
+| V2 | Schéma JSON imposé + lecture tolérante | 5/6 | 34 s (maximum 50 s) |
+
+**Lecture** : la V2 double le temps de réponse, mais elle rend le résultat exploitable : sans schéma imposé, aucune réponse du modèle n'était utilisable par l'API.
+
+**Lecture qualitative des 17 questions** (première lecture par l'équipe Data, qui n'est pas experte du métier) : environ 9 sont utilisables, 6 sont à reformuler (formulation générique ou fautes d'accord) et 2 sont à écarter. Exemple à écarter : pour Danone, le modèle demande « la date de début de la production » d'un produit végétal, alors que la fiche ne parle que d'un intérêt exploratoire. Les questions complètes sont dans `docs/evaluation.md`.
+
+**Conclusion** : la forme est maîtrisée, la pertinence reste limitée par la taille du modèle. Pour la démonstration, les questions préparées et relues restent la référence ; la génération en direct montre la faisabilité. Pistes : tester un modèle plus grand avec le même script (`python evaluer.py --model gemma2:2b`), ajouter des exemples de bonnes questions dans le prompt.
+
 **Tests automatiques** : 16 tests sur l'API RAG, 12 tests sur l'API V1. Ils passent sans Ollama.
 
-**Limites du protocole** : cas écrits par l'équipe sur 6 clients fictifs ; « ancrée » et « sans fuite » sont des contrôles par mots-clés ; la pertinence des questions doit être relue par un commercial senior, ce qui n'a pas encore été fait.
+**Limites du protocole** : cas écrits par l'équipe sur 6 clients fictifs ; la recherche est un cas facile (6 clients, requête égale à l'intitulé de l'opportunité) ; une seule exécution par cas ; « ancrée » et « sans fuite » sont des contrôles par mots-clés ; la pertinence des questions doit être relue par un commercial senior, ce qui n'a pas encore été fait.
 
 ## 6. API
 
